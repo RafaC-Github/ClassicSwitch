@@ -1,36 +1,38 @@
 
-  <nav class="navbar navbar-expand-xl navbar-light bg-light">
-    <a class="" href="#">
-        <img src="/assets/img/nintendologo.png" width="40%" alt=""> 
-    </a>
     
-      <header *ngIf="userService.getUser() as user" >
-        <ul nz-menu nzMode="horizontal" class="container ">
-            <ul class="containerletters">
-          <li nz-menu-item routerLink="" >
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="" href="#">
+      <img src="/assets/img/nintendologo.png" width="40%" alt=""> </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+      <div class="col letters" *ngIf="userService.getUser() as user" >
+  
+        <ul class="navbar-nav mr-auto" > 
+          <li routerLink="" >
             Home
           </li>
       
-          <li nz-menu-item routerLink="profile" *ngIf="user['username'] as username">
+          <li  routerLink="profile" *ngIf="user['username'] as username">
             {{username}}
           </li>
-          <li nz-menu-item (click)="logout()" *ngIf="user['id']">
+          <li  (click)="logout()" *ngIf="user['id']">
             Log out
           </li>
       
-          <li nz-menu-item routerLink="login" *ngIf="!user['id']">
+          <li  routerLink="login" *ngIf="!user['id']">
             Login
           </li>
-          <li nz-menu-item routerLink="register" *ngIf="!user['id']">
+          <li  routerLink="register" *ngIf="!user['id']">
             Register
           </li>
         </ul>
-          <form (submit)="searchProducts($event)" class="form-inline">
-            <input class="form-control mr-sm-2" name="search" id="" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
-          </form>
-        </ul>
-      </header>
-    </nav>
-    
-    
+        </div>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+ 
