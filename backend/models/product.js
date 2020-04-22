@@ -6,7 +6,8 @@ module.exports = (sequelize, DataTypes) => {
     available: DataTypes.BOOLEAN,
     image_path: DataTypes.STRING,
     platform: DataTypes.BOOLEAN,
-    description: DataTypes.STRING
+    description: DataTypes.STRING,
+    CategoryId: DataTypes.INTEGER
   }, {});
   Product.associate = function(models) {
     // associations can be defined here

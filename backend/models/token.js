@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     Token: DataTypes.STRING,
     UserId: DataTypes.INTEGER
   }, {});
-  token.associate = function(models) {
+  Token.associate = function(models) {
     // associations can be defined here
     Token.belongsTo(models.User);
 

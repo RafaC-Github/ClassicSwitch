@@ -11,9 +11,13 @@ module.exports = {
       name: {
         type: Sequelize.STRING
       },
+      CategoryId: {
+        type: Sequelize.INTEGER
+      },
       price: {
         type: Sequelize.DECIMAL
       },
+      
       available: {
         type: Sequelize.BOOLEAN
       },
