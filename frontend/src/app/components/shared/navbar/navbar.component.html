@@ -1,0 +1,36 @@
+
+  <nav class="navbar navbar-expand-xl navbar-light bg-light">
+    <a class="" href="#">
+        <img src="/assets/img/nintendologo.png" width="40%" alt=""> 
+    </a>
+    
+      <header *ngIf="userService.getUser() as user" >
+        <ul nz-menu nzMode="horizontal" class="container ">
+            <ul class="containerletters">
+          <li nz-menu-item routerLink="" >
+            Home
+          </li>
+      
+          <li nz-menu-item routerLink="profile" *ngIf="user['username'] as username">
+            {{username}}
+          </li>
+          <li nz-menu-item (click)="logout()" *ngIf="user['id']">
+            Log out
+          </li>
+      
+          <li nz-menu-item routerLink="login" *ngIf="!user['id']">
+            Login
+          </li>
+          <li nz-menu-item routerLink="register" *ngIf="!user['id']">
+            Register
+          </li>
+        </ul>
+          <form (submit)="searchProducts($event)" class="form-inline">
+            <input class="form-control mr-sm-2" name="search" id="" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </ul>
+      </header>
+    </nav>
+    
+    

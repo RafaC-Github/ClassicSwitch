@@ -1,0 +1,8 @@
+<div class="product" *ngIf="product" 
+routerLink="product/{{product.id}}"
+>
+    <h3>{{product.name }}</h3>
+    <img src="{{product.image_path}}" alt="imagen">
+    <h5>Price: {{product.price * rate | currency:currency}}</h5>
+    {{product.createdAt | date:'dd/MM/yyyy'}}
+</div>
