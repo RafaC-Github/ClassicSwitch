@@ -11,6 +11,14 @@ const {
 } = require('../config/config.json')[env];
 const transporter = require('../config/nodemailer')
 const UserController = {
+    getAll(req,res){
+        User.findAll()
+        .then(users=>res.send(users))
+    },
+    insert(req,res){
+        User.create({name:req.body.name})
+        .then(user=>res.send(user))
+    },
     async register(req, res) {
         try {
             const password = await bcrypt.hash(req.body.password, 9);
@@ -22,7 +30,7 @@ const UserController = {
                 to: email,
                 subject: 'Confirme su registro en Nintendo',
                 html: `
-                <h3>Bienvenido ${req.body.username} a la tienda de Nintendi Switch</h3>
+                <h3>Bienvenido ${req.body.username} a la tienda de Nintendo Switch</h3>
                 <a href="${url}">Click aquí para confirmar tu registro</a>
                 Este enlace caduca en 48 horas.
                 `
@@ -113,7 +121,7 @@ const UserController = {
         } catch (error) {
             console.log(error);
             res.status(500).send({
-                message: 'Hubo un problema al tratar de logearnos'
+                message: 'Hubo un problema al tratar de logear'
             });
         }
     },

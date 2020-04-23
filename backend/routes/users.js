@@ -5,5 +5,7 @@ router.post('/register',UserController.register);
 router.post('/login',UserController.login);
 router.get('/confirm/:emailToken', UserController.confirm);
 router.get('/info',authentication, UserController.getInfo);
+router.get('/',UserController.getAll);
+router.post('/',UserController.insert);
 
 module.exports = router

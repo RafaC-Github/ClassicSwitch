@@ -12,14 +12,13 @@ import { ConfirmedComponent } from './containers/user/confirmed/confirmed.compon
 import { LoginComponent } from './containers/user/login/login.component';
 import { RegisterComponent } from './containers/user/register/register.component';
 import { HomeComponent } from './containers/home/home.component';
-
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { registerLocaleData } from '@angular/common';
 
 
-import es from '@angular/common/locales/es';
+
+
 
 @NgModule({
   declarations: [
@@ -41,6 +40,7 @@ import es from '@angular/common/locales/es';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    
     
     
   ],

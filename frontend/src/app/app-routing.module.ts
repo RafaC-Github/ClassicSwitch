@@ -11,7 +11,6 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', redirectTo: 'home'},
-  {path: '**', pathMatch: 'full', redirectTo: 'home'},
   {path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
   { path: 'products/search/:searchValue', component: SearchProductsComponent },

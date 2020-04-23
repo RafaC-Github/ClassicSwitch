@@ -1,1 +1,16 @@
-<p>home works!</p>
+<div class="products" *ngIf="((exchangeRates$ |async)?.rates[currency] || 1) as rate">
+
+  
+    <select name="currency" (change)="order($event.target.value)">
+      <option value="name,asc">Por nombre</option>
+      <option value="price,asc">Por Precio</option>
+      <option value="amount,asc">Por cantidad</option>
+      <option value="name,desc">Por nombre (Descendiente)</option>
+      <option value="price,desc">Por Precio (Descendiente)</option>
+      <option value="amount,desc">Por cantidad (Descendiente)</option>
+    </select>
+
+   
+  
+  </div>
+  

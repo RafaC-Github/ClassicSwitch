@@ -3,8 +3,13 @@
     display: flex;
     justify-content: space-evenly;
 }
-.letters{
+.col.letters{
     display: flex;
     justify-content: space-evenly;
+    
 }
+li{
+    cursor: pointer;
+}
+
 
