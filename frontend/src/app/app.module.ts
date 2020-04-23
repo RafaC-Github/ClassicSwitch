@@ -8,13 +8,11 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
 import { SearchProductsComponent } from './containers/search-products/search-products.component';
-import { ConfirmedComponent } from './containers/user/confirmed/confirmed.component';
-import { LoginComponent } from './containers/user/login/login.component';
-import { RegisterComponent } from './containers/user/register/register.component';
 import { HomeComponent } from './containers/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -28,10 +26,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     FooterComponent,
     LoadingComponent,
     SearchProductsComponent,
-    ConfirmedComponent,
-    LoginComponent,
-    RegisterComponent,
     HomeComponent,
+    ProfileComponent,
+    
   ],
   imports: [
     BrowserModule,

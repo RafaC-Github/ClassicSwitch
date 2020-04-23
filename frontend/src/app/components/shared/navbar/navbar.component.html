@@ -25,11 +25,10 @@
           <li class="nav-item" routerLinkActive="active"   *ngIf="!auth.loggedIn">
             <button class="btn btn-outline-danger" (click)="auth.login()" >Login</button>
           </li>
+          <li class="nav-item" routerLinkActive="active"   *ngIf="auth.loggedIn">
+            <button class="btn btn-outline-success" routerLink="profile" *ngIf="auth.loggedIn">Perfil</button>
+          </li>
         </ul>
         </div>
-      <form class="form-inline my-2 my-lg-0" *ngIf="auth.loggedIn">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" >
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-      </form>
     </div>
  
