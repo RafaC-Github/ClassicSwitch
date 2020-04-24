@@ -53,8 +53,8 @@ export class HomeComponent implements OnInit {
 
 getTrailer = (product) => {
  document.querySelector(".videoyt").innerHTML= '<iframe width="560" height="315" src=\"' + product.youtubelink + '\" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
- document.querySelector(".imagemodal").innerHTML= '<img class="imagendelmodal" src=\"'+ product.image_path + '\">';
- document.querySelector(".modal-footer").innerHTML= '<p>'+product.description+'</p>';
+/*  document.querySelector(".imagemodal").innerHTML= '<img class="fotomodal" src=\"'+ product.image_path + '\">';
+ */ document.querySelector(".foot").innerHTML= '<h5 class="text-center text-danger m-5">'+ product.description +'</h5>';
  document.querySelector(".modal-header").innerHTML= '<h5 class="modal-title" id="exampleModalLabel">'+product.name+'</h5>';
 
  console.log(product);

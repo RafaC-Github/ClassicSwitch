@@ -1,73 +1,48 @@
 <div class="container">
-<div class="active-red-4 mt-4 mr-5 ml-5">
-  <input (keyup)="searchProducts($event.target.value)" 
-  class="form-control" type="text" placeholder="Search" aria-label="Search">
-</div>
+  <div class="active-red-4 mt-4 mr-5 ml-5">
+    <input (keyup)="searchProducts($event.target.value)" class="form-control" type="text" placeholder="Search"
+      aria-label="Search">
+  </div>
 
 
 
-<div class="filter mt-2" *ngIf="((exchangeRates$ |async)?.rates[currency] || 1) as rate">
-  <select class="selectpicker" data-style="btn-info" name="currency" (change)="order($event.target.value)">
-    <option value="name,asc">Nombre</option>
-    <option value="price,asc">Precio</option>
-    <option value="name,desc"> Nombre(Desc)</option>
-    <option value="price,desc">Precio (Desc)</option>
-  </select>
-</div>
+  <div class="filter mt-2 mb-3" *ngIf="((exchangeRates$ |async)?.rates[currency] || 1) as rate">
+    <select class="selectpicker" data-style="btn-info" name="currency" (change)="order($event.target.value)">
+      <option value="name,asc">Nombre</option>
+      <option value="price,asc">Precio</option>
+      <option value="name,desc"> Nombre(Desc)</option>
+      <option value="price,desc">Precio (Desc)</option>
+    </select>
+  </div>
 
-<div class="container">
-  <div class="row">
-    <div class="card-columns m-5">
-
-
-      <div class="card" *ngFor="let product of products">
-        <a class="card-img-top" (click)="getTrailer(product)">
-          <button  id="buttonmodal" class="btn btn-outline-danger" data-toggle="modal" data-target="#myModal">
-            <img class="card-img-top" [src]="product.image_path">
-          </button>
-        </a>
-        <div class="card-block">
-          <blockquote class="blockquote text-center">
-            <p class="mb-0">{{product.name}}</p>
-            <footer class="blockquote">{{product.price}} €</footer>
-          </blockquote>
+  <div class="container">
+    <div class="row">
+      <div class="card-columns mt-6">
+        <div class="card" *ngFor="let product of products">
+          <a class="card-img-top" (click)="getTrailer(product)">
+            <button id="buttonmodal" class="btn btn-outline-danger" data-toggle="modal" data-target="#myModal">
+              <img class="card-img-top" [src]="product.image_path">
+            </button>
+          </a>
+          <div class="card-block mt-2 ">
+            <blockquote class="blockquote text-center">
+              <p class="mb-0">{{product.name}}</p>
+              <p>{{product.price}} €</p>
+            </blockquote>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
 
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content" type="button" data-dismiss="modal" aria-label="Close">
-  
-      <div class="modal-header">
-        
+  <!-- Modal -->
+  <div class="modal fullscreen-modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content" type="button" data-dismiss="modal" aria-label="Close">
+          <div class="videoyt"></div>
+          <div class="foot"></div>
       </div>
-      
-      <div class="modal-body">
-        <div class="row">
-        <div class=”col-md-4″>
-          <div class="imagemodal">
-          </div>
-          </div>
-        <div class=”col-md-4″>
-          <div class="videoyt">
-          </div>
-        </div>
-        </div>
-        <div class="row">
-          
-        
-        <div class=”col-md-4″>
-          <div class="modal-footer">
-            
-            <div>
-            </div>
-          </div>
-
-            </div>
-          </div>
-        </div>
+    </div>
+  </div>

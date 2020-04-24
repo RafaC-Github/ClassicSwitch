@@ -1,20 +1,50 @@
+
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px 1px;
+    grid-template-areas: "videoyt videoyt videoyt videoyt" "foot foot foot foot" ". . . .";
+  }
+  
+  .videoyt { grid-area: videoyt; 
+margin-top: 15px;}
+  
+  .foot { grid-area: foot;}
+
+
 .container {
     min-height:100%;
     position:relative;
  }
+
+ .modal-dialog { 
+    max-width: 100%; 
+    width: auto !important; 
+    display: inline-block; 
+    resize: both;
+    }
 
 .filter{
     display: flex;
     justify-content: center;;
     margin-right: 10px;
 }
-img{
-    height: 23vw;
-    margin: 0;
+.row{
+    display: flex;
+    justify-content: center;
+
 }
-.imagendelmodal{
-    height: 500px;
+.modal-header{
+    display: flex;
+    justify-content: center;
 }
+
+.card-img-top{
+    height: 30vw;
+}
+
 .modal{
     text-align: center;
 }
@@ -25,16 +55,76 @@ img{
     resize: both;
     }
 
-
-.video{
-    width: auto;
+.card{
+    
+    justify-content: center;
 
 }
-.modal-content{
-    width: 90vw !important;
-    height: 40vw !important
-}
+#buttonmodal{
+    align-items: center !important;}
+
 .active-red-4 input[type=text]:focus:not([readonly]) {
     border: 1px solid red;
-    box-shadow: 0 0 0 1px #f48fb1;
+    box-shadow: 0 0 0 1px #ff0000;
   }
+  // Extra small devices (portrait phones, less than 576px)
+  @media (max-width: 575.98px) { 
+      .nintendologo{
+          margin-bottom: 10px;
+      }
+      .card-img-top{
+        width: 300px;
+        
+    }
+   }
+  
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) and (max-width: 767.98px) { 
+      .nintendologo{
+          margin-bottom: 20px;
+      }
+      .card-img-top{
+        height: 26vw;
+    }
+    .blockquote {
+        font-size: 1rem;
+    }
+      
+   }
+  
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) and (max-width: 991.98px) { 
+      .nintendologo{
+          margin-bottom: 30px;
+      }
+      .card-img-top{
+        height: 26vw;
+    }
+    
+    
+      
+   }
+  
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) and (max-width: 1199.98px) { 
+      .nintendologo{
+          margin-bottom: 30px;
+      }
+    
+    
+   }.card-img-top{
+    width: 25vw;
+}
+  
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) { 
+      .nintendologo{
+          margin-bottom: 30px;
+      }
+      .card-img-top{
+        width: 27vw;
+           }
+      
+      
+   
+}
