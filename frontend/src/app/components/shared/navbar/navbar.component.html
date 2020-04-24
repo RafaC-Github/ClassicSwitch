@@ -1,33 +1,31 @@
 
     
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <img src="/assets/img/nintendologo.png" href="#" width="20%" alt=""> 
+  <nav class="navbar navbar-expand-lg navbar-light bg-light container-fluid">
+      <img src="/assets/img/nintendologo.png"  class="nintendologo" routerLink="home" routerLinkActive="active" width="20%" alt=""> 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      
-      <div class="col letters" *ngIf="userService.getUser() as user" >
+      <div class="col letters">
   
-        <ul class="navbar-nav mr-auto" > 
-          <li class="nav-item" routerLinkActive="active" *ngIf="auth.loggedIn">
-            <a class="nav-link" routerLink="" >Home</a>
+        <ul class="navbar-nav justify-content-end" > 
+          
+          <li class="nav-item mr-5" routerLinkActive="active" routerLink="profile" *ngIf="auth.loggedIn">
+            <button class="btn btn-outline-danger btn-lg" routerLink="profile" *ngIf="auth.loggedIn">Perfil</button>
           </li>
-      
-          <li class="nav-item" routerLinkActive="active" routerLink="profile" *ngIf="auth.loggedIn">
-            
-            
-          </li>
+        
           <li class="nav-item" routerLinkActive="active" (click)="auth.logout()" *ngIf="auth.loggedIn">
-            <button class="btn btn-outline-danger"> Logout</button>
+            <button class="btn btn-outline-danger btn-lg "> Logout</button>
           </li>
-      
+          
+          
           <li class="nav-item" routerLinkActive="active"   *ngIf="!auth.loggedIn">
-            <button class="btn btn-outline-danger" (click)="auth.login()" >Login</button>
+            <button class="btn btn-outline-danger btn-lg" (click)="auth.login()" >Login</button>
           </li>
-          <li class="nav-item" routerLinkActive="active"   *ngIf="auth.loggedIn">
-            <button class="btn btn-outline-success" routerLink="profile" *ngIf="auth.loggedIn">Perfil</button>
-          </li>
+        
+        
+   
+        
         </ul>
         </div>
     </div>

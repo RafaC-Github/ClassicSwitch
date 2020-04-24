@@ -1,0 +1,40 @@
+.container {
+    min-height:100%;
+    position:relative;
+ }
+
+.filter{
+    display: flex;
+    justify-content: center;;
+    margin-right: 10px;
+}
+img{
+    height: 23vw;
+    margin: 0;
+}
+.imagendelmodal{
+    height: 500px;
+}
+.modal{
+    text-align: center;
+}
+.modal-dialog { 
+    max-width: 100%; 
+    width: auto !important; 
+    display: inline-block; 
+    resize: both;
+    }
+
+
+.video{
+    width: auto;
+
+}
+.modal-content{
+    width: 90vw !important;
+    height: 40vw !important
+}
+.active-red-4 input[type=text]:focus:not([readonly]) {
+    border: 1px solid red;
+    box-shadow: 0 0 0 1px #f48fb1;
+  }

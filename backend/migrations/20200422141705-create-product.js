@@ -17,17 +17,11 @@ module.exports = {
       price: {
         type: Sequelize.DECIMAL
       },
-      available: {
-        type: Sequelize.BOOLEAN
-      },
       image_path: {
         type: Sequelize.STRING
       },
-      platform: {
-        type: Sequelize.BOOLEAN
-      },
       description: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,
@@ -36,7 +30,11 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
-      }
+      },
+      youtubelink:{
+        type: Sequelize.STRING
+      },
+
     });
   },
   down: (queryInterface, Sequelize) => {
