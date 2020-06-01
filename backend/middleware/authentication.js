@@ -34,7 +34,6 @@ const authentication = async (req, res, next) => {
 }
 const isAdmin = async (req, res, next) => {
     const admins =['superAdmin','admin','dios'];
-    // if (req.user.role!=='admin' || req.user.role!=='superAdmin'|| req.user.role!=='dios') {
     if (!admins.includes(req.user.role)) {
         return res.status(403).send({
             message: 'No tienes permisos para ver esta sección'
